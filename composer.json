@@ -1,0 +1,11 @@
+{
+    "name": "hexlet/code",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your@email.com"
+        }
+    ],
+    "require": {}
+}
