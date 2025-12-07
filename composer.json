@@ -1,7 +1,8 @@
+
 {
     "name": "hexlet/code",
     "description": "Brain Games - educational PHP project from Hexlet",
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
@@ -11,9 +12,13 @@
     ],
     "bin": ["bin/brain-games"],
     "autoload": {
+        "files": ["src/Cli.php"],
         "psr-4": {
-            "Hexlet\\Code\\": "src/"
+            "BrainGames\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.12"
+    },
+    "keywords": ["game", "education", "brain", "hexlet", "php", "learning"]
 }
