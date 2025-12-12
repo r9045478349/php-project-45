@@ -1,10 +1,13 @@
-.PHONY: install validate brain-games lint
+.PHONY: install validate brain-games brain-even lint
 
 install:
 	composer install
 
 brain-games:
-	php bin/brain-games
+	./bin/brain-games
+
+brain-even:
+	./bin/brain-even
 
 validate:
 	composer validate --strict
