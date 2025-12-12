@@ -1,4 +1,3 @@
-
 {
     "name": "hexlet/code",
     "description": "Brain Games - educational PHP project from Hexlet",
@@ -12,15 +11,15 @@
     ],
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "autoload": {
         "files": [
-            "src/Cli.php"
-        ],
-        "psr-4": {
-            "BrainGames\\": "src/"
-        }
+            "src/Cli.php",
+            "src/Engine.php",
+            "src/Games/Calc.php"
+        ]
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.12"

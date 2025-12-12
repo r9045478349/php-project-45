@@ -1,4 +1,4 @@
-.PHONY: install validate brain-games brain-even lint
+.PHONY: install brain-games brain-even brain-calc validate lint
 
 install:
 	composer install
@@ -9,14 +9,21 @@ brain-games:
 brain-even:
 	./bin/brain-even
 
-validate:
-	composer validate --strict
+brain-calc:
+	./bin/brain-calc
 
-quick-validate:
-	composer validate --no-check-publish
+validate:
+	composer validate
 
 lint:
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
 
-lint-fix:
-	composer exec --verbose phpcbf -- --standard=PSR12 src bin
+help:
+	@echo "Available commands:"
+	@echo "  make install     - Install dependencies"
+	@echo "  make brain-games - Run brain-games"
+	@echo "  make brain-even  - Run brain-even game"
+	@echo "  make brain-calc  - Run brain-calc game"
+	@echo "  make validate    - Validate composer.json"
+	@echo "  make lint        - Check code style"
+	@echo "  make help        - Show this help"
