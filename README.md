@@ -10,3 +10,5 @@
 [![asciicast](https://asciinema.org/a/Mt0DEvhEXlrwb9sLNuow6xxFJ.svg)](https://asciinema.org/a/Mt0DEvhEXlrwb9sLNuow6xxFJ)
 ## rec progression 
 [![asciicast](https://asciinema.org/a/fQYOGbnnmqodZo8H2q2HNhjlg.svg)](https://asciinema.org/a/fQYOGbnnmqodZo8H2q2HNhjlg)
+## rec prime 
+[![asciicast](https://asciinema.org/a/IQSWT7D2Zcyr5d8iGUNPrmTZ1.svg)](https://asciinema.org/a/IQSWT7D2Zcyr5d8iGUNPrmTZ1)

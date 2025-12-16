@@ -1,4 +1,4 @@
-.PHONY: install brain-games brain-even brain-calc brain-gcd brain-progression validate lint help
+.PHONY: install brain-games brain-even brain-calc brain-gcd brain-progression brain-prime validate lint help
 
 install:
 	composer install
@@ -18,6 +18,9 @@ brain-gcd:
 brain-progression:
 	./bin/brain-progression
 
+brain-prime:
+	./bin/brain-prime
+
 validate:
 	composer validate
 
@@ -33,5 +36,6 @@ help:
 	@echo "  make brain-calc        - Run calculator game"
 	@echo "  make brain-gcd         - Run GCD game"
 	@echo "  make brain-progression - Run arithmetic progression game"
+	@echo "  make brain-prime       - Run prime number game"
 	@echo "  make validate          - Validate composer.json"
 	@echo "  make lint              - Check code style"
