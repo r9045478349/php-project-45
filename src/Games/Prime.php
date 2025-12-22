@@ -5,44 +5,35 @@ namespace BrainGames\Games\Prime;
 use function BrainGames\Engine\runGame;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const MIN_NUMBER = 2;
+const MAX_NUMBER = 100;
 
 function isPrime(int $number): bool
 {
     if ($number < 2) {
         return false;
     }
-    
-    if ($number == 2) {
-        return true;
-    }
-    
-    if ($number % 2 == 0) {
-        return false;
-    }
-    
-    $limit = (int) sqrt($number);
-    for ($i = 3; $i <= $limit; $i += 2) {
-        if ($number % $i == 0) {
+
+    for ($i = 2; $i <= sqrt($number); $i++) {
+        if ($number % $i === 0) {
             return false;
         }
     }
-    
+
     return true;
 }
 
 function generateRound(): array
 {
-    
-    $number = rand(2, 100);
-    
+    $number = rand(MIN_NUMBER, MAX_NUMBER);
+
     $question = (string) $number;
-    
     $correctAnswer = isPrime($number) ? 'yes' : 'no';
-    
+
     return [$question, $correctAnswer];
 }
 
-function run(): void
+function runPrimeGame(): void
 {
-    runGame(DESCRIPTION, __NAMESPACE__ . '\\generateRound');
+    runGame(DESCRIPTION, 'BrainGames\\Games\\Prime\\generateRound');
 }

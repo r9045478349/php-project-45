@@ -3,4 +3,4 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-\BrainGames\Games\Gcd\run();
+BrainGames\Games\Gcd\runGcdGame();

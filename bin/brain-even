@@ -1,47 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-namespace BrainGames\Games;
-
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function cli\line;
-use function cli\prompt;
-
-const ROUNDS_COUNT = 3;
-const MIN_NUMBER = 1;
-const MAX_NUMBER = 100;
-
-function isEven($number)
-{
-    return $number % 2 === 0;
-}
-
-function playEven()
-{
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
-    line("Hello, {$name}!");
-    
-    line('Answer "yes" if the number is even, otherwise answer "no".');
-    
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $number = rand(MIN_NUMBER, MAX_NUMBER);
-        line("Question: {$number}");
-        
-        $userAnswer = prompt('Your answer');
-        $correctAnswer = isEven($number) ? 'yes' : 'no';
-        
-        if ($userAnswer !== $correctAnswer) {
-            line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
-            line("Let's try again, {$name}!");
-            return;
-        }
-        
-        line('Correct!');
-    }
-    
-    line("Congratulations, {$name}!");
-}
-
-playEven();
+BrainGames\Games\Even\runEvenGame();

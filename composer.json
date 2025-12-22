@@ -1,3 +1,4 @@
+
 {
     "name": "hexlet/code",
     "description": "Brain Games - educational PHP project from Hexlet",
@@ -22,6 +23,7 @@
             "src/Cli.php",
             "src/Engine.php",
             "src/Games/Calc.php",
+            "src/Games/Even.php",
             "src/Games/Gcd.php",
             "src/Games/Progression.php",
             "src/Games/Prime.php"
