@@ -20,11 +20,11 @@ function generateRound(): array
 {
     $num1 = rand(1, 100);
     $num2 = rand(1, 100);
-    
-    $question = "{$num1} {$num2}";
-    
+
+    $question = sprintf("%s %s", $num1, $num2);
+
     $correctAnswer = (string) gcd($num1, $num2);
-    
+
     return [$question, $correctAnswer];
 }
 

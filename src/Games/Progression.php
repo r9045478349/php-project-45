@@ -20,21 +20,21 @@ function generateProgression(int $start, int $step, int $length): array
 function generateRound(): array
 {
     $length = rand(MIN_LENGTH, MAX_LENGTH);
-    
+
     $start = rand(1, 50);
-    
+
     $step = rand(2, 10);
-    
+
     $progression = generateProgression($start, $step, $length);
-    
+
     $hiddenIndex = rand(0, $length - 1);
-    
+
     $correctAnswer = (string) $progression[$hiddenIndex];
-    
+
     $progression[$hiddenIndex] = '..';
-    
+
     $question = implode(' ', $progression);
-    
+
     return [$question, $correctAnswer];
 }
 

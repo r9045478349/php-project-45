@@ -26,10 +26,10 @@ function generateRound()
     $num1 = rand(1, 50);
     $num2 = rand(1, 50);
     $operator = OPERATORS[array_rand(OPERATORS)];
-    
-    $question = "{$num1} {$operator} {$num2}";
+
+    $question = sprintf("%s %s %s", $num1, $operator, $num2);
     $correctAnswer = (string) calculate($num1, $num2, $operator);
-    
+
     return [$question, $correctAnswer];
 }
 
