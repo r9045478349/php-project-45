@@ -1,20 +1,16 @@
-
 <?xml version="1.0"?>
 <ruleset name="Brain Games">
     <description>Brain Games coding standard</description>
     
-    <!-- Проверяемые директории -->
+    <!-- Проверяем только src -->
     <file>src</file>
-    <file>bin</file>
     
-    <!-- Исключения -->
-    <exclude-pattern>vendor/*</exclude-pattern>
+    <!-- Исключаем vendor и bin -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
     
     <!-- Стандарт PSR12 -->
     <rule ref="PSR12"/>
     
     <!-- Дополнительные настройки -->
     <arg name="colors"/>
-    <arg value="p"/>
-    <arg name="report" value="full"/>
 </ruleset>

@@ -1,3 +1,4 @@
+
 .PHONY: install brain-games brain-even brain-calc brain-gcd brain-progression brain-prime validate lint help
 
 install:
@@ -25,7 +26,7 @@ validate:
 	composer validate
 
 lint:
-	composer exec --verbose phpcs -- --standard=PSR12 src bin
+	./vendor/bin/phpcs --standard=PSR12 src/
 
 help:
 	@echo "Brain Games - Make Commands"
