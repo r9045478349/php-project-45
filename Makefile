@@ -1,5 +1,5 @@
 
-.PHONY: install brain-games brain-even brain-calc brain-gcd brain-progression brain-prime validate lint help
+.PHONY: install brain-games brain-even brain-calc brain-gcd brain-progression brain-prime validate lint lint-fix help
 
 install:
 	composer install
@@ -26,17 +26,10 @@ validate:
 	composer validate
 
 lint:
-	./vendor/bin/phpcs --standard=PSR12 src/
+	composer exec --verbose phpcs -- --standard=PSR12 src/
+	composer exec --verbose phpstan analyse -- --level=1 src/
 
-help:
-	@echo "Brain Games - Make Commands"
-	@echo "============================"
-	@echo "  make install           - Install dependencies"
-	@echo "  make brain-games       - Run welcome game"
-	@echo "  make brain-even        - Run even/odd game"
-	@echo "  make brain-calc        - Run calculator game"
-	@echo "  make brain-gcd         - Run GCD game"
-	@echo "  make brain-progression - Run arithmetic progression game"
-	@echo "  make brain-prime       - Run prime number game"
-	@echo "  make validate          - Validate composer.json"
-	@echo "  make lint              - Check code style"
+lint-fix:
+	composer exec --verbose phpcbf -- src
+
+
