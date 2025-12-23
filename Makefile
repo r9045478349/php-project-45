@@ -26,8 +26,8 @@ validate:
 	composer validate
 
 lint:
-	composer exec --verbose phpcs -- --standard=PSR12 src/
-	composer exec --verbose phpstan analyse -- --level=1 src/
+	composer exec --verbose phpcs -- src
+	composer exec --verbose phpstan 
 
 lint-fix:
 	composer exec --verbose phpcbf -- src
